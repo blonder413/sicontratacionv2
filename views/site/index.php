@@ -1,6 +1,6 @@
 <?php
 /* @var $this yii\web\View */
-$this->title = 'My Yii Application';
+$this->title = 'Subsistema de información de contratación V2';
 ?>
 <div class="site-index">
 
