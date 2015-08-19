@@ -35,7 +35,7 @@ class Pdm extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['pdm'], 'required'],
+            [['pdm','acuerdo'], 'required'],
             [['pdm'], 'string'],
             [['fechainicio', 'fechafin', 'fechacrea', 'fechamodifica'], 'safe'],
             [['usuariocrea', 'usuariomodifica'], 'integer'],
@@ -50,10 +50,10 @@ class Pdm extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'pdm' => 'Pdm',
+            'pdm' => 'Nombre del plan',
             'acuerdo' => 'Acuerdo',
-            'fechainicio' => 'Fechainicio',
-            'fechafin' => 'Fechafin',
+            'fechainicio' => 'Fecha de inicio',
+            'fechafin' => 'Fecha de fin',
             'usuariocrea' => 'Usuariocrea',
             'fechacrea' => 'Fechacrea',
             'usuariomodifica' => 'Usuariomodifica',

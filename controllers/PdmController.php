@@ -62,8 +62,11 @@ class PdmController extends Controller
     {
         $model = new Pdm();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+        if ($model->load(Yii::$app->request->post())) {
+            if( $model->save()){
+                Yii::$app->session->setFlash('success','Plan de desarrollo actualizado');
+                return $this->redirect(['index']);
+            }
         } else {
             return $this->render('create', [
                 'model' => $model,
@@ -81,8 +84,11 @@ class PdmController extends Controller
     {
         $model = $this->findModel($id);
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+         if ($model->load(Yii::$app->request->post())) {
+            if( $model->save()){
+                Yii::$app->session->setFlash('success','Plan de desarrollo creado');
+                return $this->redirect(['index']);
+            }
         } else {
             return $this->render('update', [
                 'model' => $model,
@@ -99,7 +105,7 @@ class PdmController extends Controller
     public function actionDelete($id)
     {
         $this->findModel($id)->delete();
-
+        Yii::$app->session->setFlash('success','Plan de desarrollo Eliminado');
         return $this->redirect(['index']);
     }
 

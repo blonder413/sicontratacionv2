@@ -6,8 +6,9 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model app\models\Pdm */
 
-$this->title = 'Create Pdm';
-$this->params['breadcrumbs'][] = ['label' => 'Pdms', 'url' => ['index']];
+$this->title = 'Crear Plan de desarrollo';
+$this->params['breadcrumbs'][] = ['label' => 'Administración', 'url' => ['/site/config']];
+$this->params['breadcrumbs'][] = ['label' => 'Planes de desarrollo', 'url' => ['/pdm/index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="pdm-create">

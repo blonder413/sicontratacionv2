@@ -5,10 +5,10 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model app\models\Pdm */
 
-$this->title = 'Update Pdm: ' . ' ' . $model->id;
-$this->params['breadcrumbs'][] = ['label' => 'Pdms', 'url' => ['index']];
-$this->params['breadcrumbs'][] = ['label' => $model->id, 'url' => ['view', 'id' => $model->id]];
-$this->params['breadcrumbs'][] = 'Update';
+$this->title = 'Actualizar Plan de desarrollo';
+$this->params['breadcrumbs'][] = ['label' => 'Administración', 'url' => ['/site/config']];
+$this->params['breadcrumbs'][] = ['label' => 'Planes de desarrollo', 'url' => ['/pdm/index']];
+$this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="pdm-update">
 

@@ -5,6 +5,7 @@ $params = require(__DIR__ . '/params.php');
 $config = [
     'id' => 'basic',
     'name'=>'SicontratacionV2',
+    'language'=>'es-CO',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'components' => [

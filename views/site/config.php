@@ -1,6 +1,7 @@
 <?php 
     use yii\helpers\Html;
-    $this->title = 'Panel de Administración';
+    $this->title = 'Administración';
+    $this->params['breadcrumbs'][] = $this->title;
 ?>
 
 <div class="col-md-12">
